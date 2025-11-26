@@ -53,8 +53,9 @@ io.on('connection', function(socket) {
   });
 });
 
-http.listen(3000, function() {
-  console.log('Example app listening on port 3000!');
+const PORT = process.env.PORT || 3000;
+http.listen(PORT, function() {
+  console.log(`Example app listening on port ${PORT}!`);
 });
 
 function createBot() {
